@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 3, 2019, 11:15:39 PM
+    Author     : GreyBacon
+*/
+body { 
+    text-align: center; 
+    }
+.container { 
+    display:grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto auto; 
+    grid-template-areas: ". header ."
+                         ". err ."
+                         "left middle middle";
+}
+
+.container>* {
+    grid-area:middle;
+    text-align: left;
+}
+
+.labelTable { 
+    text-align: right; 
+    width: auto;}
+
+.title { grid-area: header; 
+        text-align: center; }
+
+table { 
+    border-bottom: 2px solid black; 
+    padding-left:  15px; 
+    padding-right:  15px;
+    padding-bottom: 30px;}
+
+.submitBtn {
+    margin-top: 15px; 
+    margin-left:20%;
+}
+
+#errorSpace {
+    text-align:center;
+    grid-area:err;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+    color:red;
+}
+
+#productName { width: 300px; }
